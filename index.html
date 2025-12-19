@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Daffa</title>
+
+    <!-- CSS External -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <!-- Header Content -->
+    <header class="main-header sticky-nav">
+        <!-- Profile Picture -->
+                <a href="#home-page" class="profile-logo-link" aria-label="Home">
+                      <img class="profile-logo-img" id="cat-profile-img" src="https://cataas.com/cat?width=60&height=60&fit=cover" alt="Profile Cat" />
+                </a>
+        <nav class="nav-links">
+            <a class="nav-link" href="#home-page">Home</a>
+            <a class="nav-link" href="#our-profile-page">Our Profile</a>
+            <a class="nav-link" href="#portfolio-page">Portfolio</a>
+            <a class="nav-link" href="#message-us-page">Message Us</a>
+        </nav>
+    </header>
+
+    <hr />
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section id="home-page" class="welcome-section-bg">
+            <div class="welcome-content-bg">
+                <h2 class="welcome-title" id="welcome-speech">Welcome to Our Website</h2>
+                <p class="welcome-sub">Ini adalah website latihan </p>
+            </div>
+        </section>
+
+        <!-- Our Profile Page -->
+        <section id="our-profile-page" class="min-h-[500px]">
+
+
+            <!-- About the Company -->
+            <div class="container mx-auto p-8">
+                <h2 class="text-3xl font-bold text-center mb-8">About Daffa Company</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Daffa Company is a leading provider of innovative solutions in technology, design, and consulting. Founded with a passion for excellence, we specialize in delivering high-quality services that empower businesses to thrive in the digital age. Our team of experts combines creativity, technical expertise, and strategic thinking to create tailored solutions that meet the unique needs of our clients. With years of experience and a commitment to continuous improvement, Yama Company has built a reputation for reliability, innovation, and customer satisfaction.
+                </p>
+
+            <!-- Vision and Mission -->
+             <div class="vision-mission grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-800">Our Vision</h3>
+                    <p class="text-gray-700">
+                        To be the foremost innovator in digital solutions, inspiring businesses worldwide to embrace technology for sustainable growth and positive impact. We envision a future where every organization can leverage cutting-edge tools to achieve their full potential and contribute to a better world.
+                    </p>
+                </div>
+                 <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-semibold mb-4 text-green-800">Our Mission</h3>
+                        <p class="text-gray-700">
+                            To empower businesses through exceptional technology services, fostering creativity, efficiency, and success. We are committed to delivering personalized solutions, building lasting partnerships, and continuously advancing our expertise to exceed client expectations and drive meaningful change in the industry.
+                        </p>
+                </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Headquarter Section -->
+<div class="hq-section">
+<h3 class="hq-title">Our Headquarter</h3>
+<div class="hq-grid">
+<div class="hq-item">
+<div class="hq-photo" style="background-image:url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=facearea&w=200&h=200');"></div>
+<div class="hq-label">Jakarta</div>
+</div>
+<div class="hq-item">
+<div class="hq-photo" style="background-image:url('https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=facearea&w=200&h=200');"></div>
+<div class="hq-label">Bandung</div>
+</div>
+<div class="hq-item">
+<div class="hq-photo" style="background-image:url('https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=facearea&w=200&h=200');"></div>
+<div class="hq-label">Surabaya</div>
+</div>
+</div>
+</div>
+
+
+<!-- Message Us Page -->
+<section id="message-us-page" class="min-h-[500px] mx-8">
+    <header>
+        <h2 class="text-xl font-bold">Message Us</h2>
+        <p class="mt-2">Have questions or want to work with us? Send us a message and we'll get back to you
+            promptly.</p>
+    </header>
+
+    <div class="message-wrapper">
+        <div class="message-flex">
+            <form id="messageForm" class="message-form-box">
+                <div class="form-row">
+                    <label for="nama">Nama</label>
+                    <input type="text" id="nama" name="nama" required />
+                </div>
+                <div class="form-row">
+                    <label for="tglLahir">Tanggal Lahir</label>
+                    <input type="date" id="tglLahir" name="tglLahir" required />
+                </div>
+                <div class="form-row" id="jkGroup">
+                    <label>Jenis Kelamin</label>
+                    <div class="radio-group">
+                        <label><input type="radio" name="jk" value="Laki-Laki" required /> Laki-Laki</label>
+                        <label><input type="radio" name="jk" value="Perempuan" required /> Perempuan</label>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="pesan">Pesan</label>
+                    <textarea id="pesan" name="pesan" rows="3" required></textarea>
+                </div>
+                <div class="form-row">
+                    <button type="submit" class="submit-btn">Submit</button>
+                </div>
+            </form>
+            <aside class="submission-result message-result-box" aria-live="polite">
+                <div><b>Current time :</b> <span id="time"></span></div>
+                <div><b>Nama :</b> <span id="outNama"></span></div>
+                <div><b>Tanggal Lahir :</b> <span id="outTgl"></span></div>
+                <div><b>Jenis Kelamin :</b> <span id="outJk"></span></div>
+                <div><b>Pesan :</b> <span id="outPesan"></span></div>
+            </aside>
+        </div>
+    </div>
+</section>
+</main>
+
+    <!-- Footer Content -->
+    <footer>
+        <p class="text-center p-4">© 2025 Daffa Company. All rights reserved.</p>
+    </footer>
+
+    <!-- JS External -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
